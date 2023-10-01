@@ -1,0 +1,87 @@
+<mat-toolbar>
+  <button (click)="drawer.toggle()" mat-icon-button> <mat-icon>menu</mat-icon> </button>
+  <span>Lab Managment System | </span>
+
+  <button mat-button [routerLink]="''" routerLinkActive="active-link">Home</button>
+  
+  <span class="example-spacer"></span>
+  
+  <button mat-button routerLink="/profile" routerLinkActive="active-link">
+    <mat-icon>account_circle</mat-icon>profile
+  </button>
+  
+  <button mat-button (click)="logOut()" *ngIf="currentUser?.id">
+    <mat-icon aria-label="logout icon" fontIcon="logout" color="warn"></mat-icon>
+    Sign Out
+  </button>
+
+</mat-toolbar>
+
+<mat-drawer-container>
+  <mat-drawer #drawer opened="true" mode="side" position="start">
+
+    <img class="avatar mat-elevation-z8 img" src="https://xsgames.co/randomusers/avatar.php?g=male">
+    <h4 class="name">Abdellah belcaid</h4>
+    <p class="designation">Software Engineer</p>
+
+    <mat-divider></mat-divider>
+
+    <mat-nav-list>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/etablissements'" routerLinkActive="active-link">
+          <mat-icon>business</mat-icon>
+          Etablissements
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/laboratoires'" routerLinkActive="active-link">
+          <mat-icon>science</mat-icon>
+          Laboratoires
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/membre'" routerLinkActive="active-link">
+          <mat-icon>supervised_user_circle</mat-icon>
+          Membres
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/projet'" routerLinkActive="active-link">
+          <mat-icon>description</mat-icon>
+          Projets
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/responsable'" routerLinkActive="active-link">
+          <mat-icon>assignment_ind</mat-icon>
+          Responsables
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/expressionBesoin'" routerLinkActive="active-link">
+          <mat-icon>gesture</mat-icon>
+          Expressions Besoin
+        </button>
+      </mat-list-item>
+
+      <mat-list-item>
+        <button mat-button [routerLink]="'/admin/dotation-uca-rech'" routerLinkActive="active-link">
+          <mat-icon>money</mat-icon>
+          Dotation-uca-rech
+        </button>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content mat-elevation-z4">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

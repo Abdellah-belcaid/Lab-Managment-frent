@@ -1,0 +1,71 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar{
+  background-color: #F2F2F2;
+  color: #333;
+}
+
+mat-drawer{
+  margin: 16px;
+  width: 250px;
+  min-height: auto;
+  border-right: none;
+  background-color: #c5dcf5;
+  color: #333;
+  border-radius: 10px;
+  padding: 16px;
+  
+}
+
+mat-divider{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: black;
+}
+
+.img {
+  border-radius: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  box-shadow: 0 0 0 5px #FFF;
+}
+
+.name {
+  text-align: center;
+  color: #333;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.designation {
+  text-align: center;
+  color: #666;
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.content{
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  border-radius: 10px;
+  padding: 6px;
+  background-color: #F2F2F2;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
