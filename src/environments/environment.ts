@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:8080' // Replace with the actual base URL of your backend API
+  apiUrl: 'https://lab-managment-system.onrender.com/' // Replace with the actual base URL of your backend API
 };
